@@ -1,0 +1,24 @@
+{
+  "name": "logindemo",
+  "version": "1.0.0",
+  "description": "Demo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client":"npm start --prefix client",
+    "dev":"concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Sachin Antony",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "mongojs": "^2.5.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "express": "^4.16.2",
+    "nodemon": "^1.17.1"
+  }
+}
