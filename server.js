@@ -1,28 +1,18 @@
-const express = require('express');
-const app = express();
-const port = 5000;
-const bodyParser = require('body-parser');
-const mongojs = require('mongojs');
-const db = mongojs('expenseAppDB',['baseCollection'])
-app.get('/api/customers',(req,res)=>{
-    const customers = [];
-    res.send("I hear you");
-});
+const nodemon = require('nodemon');
+const path = require('path');
 
-
-//Body Parser middleware
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:false}));
-
-app.post('/user/login',(req,res)=>{
-    console.log('Username: ',req.body.username);
-    console.log('Password: ',req.body.password);
-    db.baseCollection.find((err,docs)=>{
-        console.log(docs);
+nodemon({
+    execMap: {
+        js: 'node'
+    },
+    script: path.join(__dirname, 'server/server'),
+    ignore: [],
+    ext: 'js'
+})
+    .on('restart', function() {
+        console.log('Server restarted!');
+    })
+    .once('exit', function () {
+        console.log('Shutting down server');
+        process.exit();
     });
-    res.send("Received data");
-});
-
-
-
-app.listen(port, () => console.log(`Server started on port ${port}`));
