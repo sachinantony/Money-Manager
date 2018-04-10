@@ -168,6 +168,7 @@ module.exports = (app) => {
     app.get('/api/account/logout',(req,res,next) =>{
         const{query} = req;
         const{token} = query;
+        console.log('Reached');
         UserSession.findOneAndUpdate({
             _id: token,
             isDeleted: false

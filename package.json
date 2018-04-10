@@ -15,9 +15,12 @@
   "dependencies": {
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
+    "bootstrap": "^4.0.0",
     "fs": "0.0.1-security",
+    "jquery": "^3.3.1",
     "mongojs": "^2.5.0",
-    "mongoose": "^5.0.12"
+    "mongoose": "^5.0.12",
+    "react-bootstrap": "^0.32.1"
   },
   "devDependencies": {
     "concurrently": "^3.5.1",
