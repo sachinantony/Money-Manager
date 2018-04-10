@@ -56,7 +56,7 @@ class SignInPage extends Component {
                             </div>
                             <div className="col-xs-6">
                                 <p className="lead">Register now for <span className="text-success">FREE</span></p>
-                                <ul className="list-unstyled" style={{lineHeight: 2, textAlign:'left'}}>
+                                <ul className="list-unstyled" style={{lineHeight: 2}}>
                                     <li><span className="fa fa-check text-success"></span> Track all your expenses</li>
                                     <li><span className="fa fa-check text-success"></span> Have multiple accounts</li>
                                     <li><span className="fa fa-check text-success"></span> Create custom budgets</li>
