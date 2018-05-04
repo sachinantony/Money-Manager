@@ -17,10 +17,12 @@
     "body-parser": "^1.18.2",
     "bootstrap": "^4.0.0",
     "fs": "0.0.1-security",
+    "history": "^4.7.2",
     "jquery": "^3.3.1",
     "mongojs": "^2.5.0",
     "mongoose": "^5.0.12",
     "react-bootstrap": "^0.32.1",
+    "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
