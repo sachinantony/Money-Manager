@@ -3,7 +3,7 @@ const UserSession = require('../../models/UserSession')
 module.exports = (app) => {
 
     // Sign Up Process
-    app.post('/api/account/signup', (req, res, next) => {
+    app.post('/api/user/signup', (req, res, next) => {
         const {body} = req;
         const {
             fName,
@@ -64,7 +64,7 @@ module.exports = (app) => {
         });
     });
 
-    app.post('/api/account/signin', (req,res,next) =>{
+    app.post('/api/user/signin', (req,res,next) =>{
         const {body} = req;
         const {
             password
@@ -129,7 +129,7 @@ module.exports = (app) => {
     });
 
     //Verify unique token & not deleted
-    app.get('/api/account/verify',(req,res,next) => {
+    app.get('/api/user/verify',(req,res,next) => {
         const{query} = req;
         const{token} = query;
         UserSession.find({
@@ -165,7 +165,7 @@ module.exports = (app) => {
         });
     });
 
-    app.get('/api/account/logout',(req,res,next) =>{
+    app.get('/api/user/logout',(req,res,next) =>{
         const{query} = req;
         const{token} = query;
         console.log('Reached');

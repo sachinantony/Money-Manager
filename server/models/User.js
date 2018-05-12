@@ -18,13 +18,6 @@ const transactionSchema = new mongoose.Schema({
         default:false
     }
 })
-const categorySchema = new mongoose.Schema({
-    catName:{
-        type:String,
-        default: ''
-    },
-    transactions:[transactionSchema]
-})
 
 const acctSchema = new mongoose.Schema({
     acctName:{
@@ -35,10 +28,17 @@ const acctSchema = new mongoose.Schema({
         type:String,
         default: ''
     },
-    categories:[categorySchema],
+    category:{
+        type:String,
+        default: ''
+    },
     isDeleted:{
         type:Boolean,
         default:false
+    },
+    imgCode:{
+        type:String,
+        default: 'default'
     }
 });
 const UserSchema = new mongoose.Schema({
@@ -62,7 +62,11 @@ const UserSchema = new mongoose.Schema({
     isDeleted:{
         type:Boolean,
         default:false
-    }
+    },
+    acctCategories:{
+        default:['creditCard','debitCard','investment','others']
+    },
+    transactions:[transactionSchema]
 
 });
 

@@ -16,7 +16,7 @@ class SignInPage extends Component {
         var prev = this;
         console.log('reached');
         console.log(this.refs.password.value);
-        axios.post('api/account/signin', {
+        axios.post('api/user/signin', {
             email: this.refs.email.value,
             password: this.refs.password.value
         })
